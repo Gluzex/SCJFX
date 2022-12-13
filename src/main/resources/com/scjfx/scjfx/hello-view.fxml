@@ -3,14 +3,25 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.scjfx.scjfx.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.scjfx.scjfx.MainViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+</VBox>-->
+
+<AnchorPane prefHeight="240.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scjfx.scjfx.MainViewController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="73.0" text="Имя формы:" />
+        <TextField fx:id="txt_fld1" layoutX="87.0" layoutY="12.0" promptText="Например, 106" />
+        <Label layoutX="254.0" layoutY="16.0" text="Режим:" />
+        <ComboBox fx:id="cmbx1" layoutX="300.0" layoutY="12.0" prefHeight="25.0" prefWidth="160.0" promptText="Выберите режим" onAction="#MainViewController" />
+    </children>
+</AnchorPane>
