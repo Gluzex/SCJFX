@@ -7,6 +7,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.util.Objects;
 
 public class MainViewController {
@@ -46,7 +47,10 @@ public class MainViewController {
 
     }
     public void CheckClicked(){
-
+        File file1 = BrowseAction.getFile();
+        String fname1 = BrowseAction.getFName1();
+        String path_u = BrowseAction.getPath_u();
+        new CheckAction(file1, fname1, path_u, primaryStage);
     }
 
     /*public void setPrimaryStage(Stage primaryStage) {
