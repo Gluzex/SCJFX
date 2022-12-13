@@ -2,20 +2,51 @@ package com.scjfx.scjfx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.util.Objects;
 
 public class MainViewController {
     @FXML
     private TextField txt_fld1;
     @FXML
-    private ComboBox cmbx1;
+    private ComboBox<String> cmbx1;
     @FXML
     private Stage primaryStage;
+    @FXML
+    private TextField txtf1;
+    @FXML
+    private Button Browse;
+    @FXML
+    private Button ChckBtn1;
 
     public void MainViewController(ActionEvent actionEvent) {
         primaryStage = SCJFXApp.getPrimaryStage();
+        //txt_fld1.setText("action perfomed");
+        if (Objects.equals(cmbx1.getValue(), "Из файла")){
+            System.out.print("if is ok");
+            fromFile();
+        }
+    }
+    public void fromFile(){
+        txtf1.setVisible(true);
+        txtf1.setDisable(false);
+        Browse.setVisible(true);
+        Browse.setDisable(false);
+        ChckBtn1.setVisible(true);
+        primaryStage.setWidth(1020);
+        primaryStage.setHeight(300);
+    }
+
+    public void BrowseClicked(){
+        new BrowseAction(txt_fld1, primaryStage, ChckBtn1, txtf1);
+
+    }
+    public void CheckClicked(){
+
     }
 
     /*public void setPrimaryStage(Stage primaryStage) {

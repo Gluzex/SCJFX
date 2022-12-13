@@ -3,7 +3,6 @@ package com.scjfx.scjfx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,9 +14,6 @@ public class SCJFXApp extends Application {
         SCJFXApp.pStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("hello-view.fxml"));
-        //AnchorPane root = (AnchorPane)fxmlLoader.load();
-        //MainViewController controller = fxmlLoader.getController();
-        //controller.setPrimaryStage(stage);
         Scene scene = new Scene(fxmlLoader.load(), 520, 240);
         stage.setTitle("Script Creator");
         stage.setScene(scene);
