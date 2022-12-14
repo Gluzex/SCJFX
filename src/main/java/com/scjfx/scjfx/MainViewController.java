@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -18,6 +19,8 @@ public class MainViewController {
     @FXML
     private Stage primaryStage;
     @FXML
+    private AnchorPane root;
+    @FXML
     private TextField txtf1;
     @FXML
     private Button Browse;
@@ -26,6 +29,7 @@ public class MainViewController {
 
     public void MainViewController(ActionEvent actionEvent) {
         primaryStage = SCJFXApp.getPrimaryStage();
+        root = SCJFXApp.getRoot();
         //txt_fld1.setText("action perfomed");
         if (Objects.equals(cmbx1.getValue(), "Из файла")){
             System.out.print("if is ok");
@@ -50,7 +54,7 @@ public class MainViewController {
         File file1 = BrowseAction.getFile();
         String fname1 = BrowseAction.getFName1();
         String path_u = BrowseAction.getPath_u();
-        new CheckAction(file1, fname1, path_u, primaryStage);
+        new CheckAction(file1, fname1, path_u, primaryStage, root);
     }
 
     /*public void setPrimaryStage(Stage primaryStage) {

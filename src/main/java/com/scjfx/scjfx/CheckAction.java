@@ -1,5 +1,6 @@
 package com.scjfx.scjfx;
 
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,6 +14,7 @@ public class CheckAction {
     public String path_u1;
     public String FName2;
     public Stage mnf;
+    public AnchorPane root;
     public Button ScrBtn2;
     public Label Label_sys_id;
     public Label LabelRN;
@@ -42,11 +44,12 @@ public class CheckAction {
     TextField[] txtf_TF_set = new TextField[12];
     TextField[] txtf_SR_set = new TextField[12];
     TextField[] txtf_SearchPath2_set = new TextField[12];
-    public CheckAction(File file1, String fname1, String path_u, Stage primaryStage) {
+    public CheckAction(File file1, String fname1, String path_u, Stage primaryStage, AnchorPane root) {
         this.file11 = file1;
         this.path_u1 = path_u;
         this.FName2 = fname1;
         this.mnf = primaryStage;
+        this.root = root;
 
         new SC_FEx(file11);
 
