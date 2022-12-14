@@ -45,8 +45,8 @@ public class SC_data_miner {
                             if(sheet.getRow(g) != null){
                                 XSSFCell cell = sheet.getRow(g).getCell(k);
                                 if(cell != null) {
-                                    if(cell.getCellTypeEnum() != CellType.STRING){
-                                        if(cell.getCellTypeEnum() != CellType.NUMERIC){
+                                    if(cell.getCellType() != /*cell.getCellTypeEnum().STRING*/CellType.STRING){
+                                        if(cell.getCellType() != /*cell.getCellTypeEnum().NUMERIC*/CellType.NUMERIC){
                                             cellValue = String.valueOf(cell.getNumericCellValue());
                                         } else {
                                             cellValue= "";
@@ -114,8 +114,8 @@ public class SC_data_miner {
                             if(sheet.getRow(g) != null){
                                 cell = sheet.getRow(g).getCell(k);
                                 if(cell != null) {
-                                    if(cell.getCellTypeEnum() != CellType.STRING){
-                                        if(cell.getCellTypeEnum() != CellType.NUMERIC){
+                                    if(cell.getCellType() != /*cell.getCellTypeEnum().STRING*/CellType.STRING){
+                                        if(cell.getCellType() != /*cell.getCellTypeEnum().NUMERIC*/CellType.NUMERIC){
                                             cellValue = String.valueOf(cell.getNumericCellValue());
                                         } else {
                                             cellValue= "";
@@ -205,8 +205,8 @@ public class SC_data_miner {
                             if(sheet.getRow(g) != null){
                                 XSSFCell cell = sheet.getRow(g).getCell(k);
                                 if(cell != null){
-                                    if(cell.getCellTypeEnum() != CellType.STRING){
-                                        if(cell.getCellTypeEnum() != CellType.NUMERIC){
+                                    if(cell.getCellType() != /*cell.getCellTypeEnum().STRING*/CellType.STRING){
+                                        if(cell.getCellType() != /*cell.getCellTypeEnum().NUMERIC*/CellType.NUMERIC){
                                             cellValue = String.valueOf(cell.getNumericCellValue());
                                         } else {
                                             cellValue= "";

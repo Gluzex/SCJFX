@@ -1,6 +1,6 @@
 package com.scjfx.scjfx;
 
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -17,9 +17,9 @@ public class SC_data_checker {
                     System.out.print("i = " + i + "\n");
                     XSSFSheet sheet = wb.getSheetAt(i);
                     if (sheet.getRow(1).getCell(0) != null){
-                        Cell cell = sheet.getRow(1).getCell(0);
-                        if(cell.getCellTypeEnum() != CellType.STRING){
-                            if(cell.getCellTypeEnum() != CellType.NUMERIC){
+                        XSSFCell cell = sheet.getRow(1).getCell(0);
+                        if(cell.getCellType() != /*cell.getCellTypeEnum().STRING*/CellType.STRING){
+                            if(cell.getCellType() != /*cell.getCellTypeEnum().NUMERIC*/CellType.NUMERIC){
                                 cellValue = String.valueOf(cell.getNumericCellValue());
                             } else {
                                 cellValue= "";

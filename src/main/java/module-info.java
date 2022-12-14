@@ -1,8 +1,7 @@
 module com.scjfx.scjfx {
     requires javafx.controls;
     requires javafx.fxml;
-    requires poi.ooxml;
-    requires poi;
+    requires org.apache.poi.ooxml;
 
 
     opens com.scjfx.scjfx to javafx.fxml;
